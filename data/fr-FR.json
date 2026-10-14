@@ -1,0 +1,235 @@
+{
+  "locale": "fr-FR",
+  "country": "France",
+  "framework": "SST",
+  "version": 1,
+  "reviewStatus": "draft",
+  "sourcesCheckedOn": "2026-10-14",
+  "emergencyNumbers": ["15", "18", "112"],
+  "disclaimer": "Exercices pédagogiques, non validés par un formateur SST. Ne remplacent ni la formation, ni le MAC, ni les consignes de votre entreprise. En urgence réelle, contactez les secours (15, 18 ou 112 selon la situation) et suivez leurs instructions. N’utilisez pas ce jeu pour guider une intervention.",
+  "ui": {
+    "eyebrow": "LA RÉVISION, À VOTRE RYTHME",
+    "title": "Rester prêt.\nRéviser les bons repères.",
+    "description": "Quelques minutes pour revoir les fondamentaux, réfléchir à une situation et comprendre vos choix. Sans chrono, sans pression.",
+    "review": "Contenu pilote · à faire valider",
+    "modeHeading": "Comment souhaitez-vous réviser ?",
+    "modeSubtitle": "Deux formats, un même objectif : entretenir vos repères.",
+    "quizTitle": "Refresh rapide",
+    "quizDescription": "Un QCM express pour revoir la protection, l’alerte et la prévention. Une explication et une référence après chaque réponse.",
+    "quizMeta": "5 questions · à votre rythme",
+    "quizStart": "Lancer le QCM",
+    "scenarioTitle": "Cas concret",
+    "scenarioDescription": "Un mini-scénario au travail. Vos choix orientent le parcours : observez, décidez et découvrez le retour pédagogique.",
+    "scenarioLabel": "Choisir une situation",
+    "scenarioMeta": "Parcours pas-à-pas",
+    "scenarioStart": "Explorer le cas",
+    "contextTitle": "Un entraînement, pas une certification",
+    "contextDescription": "Ce pilote porte sur la protection, l’alerte et la prévention. Il ne décrit pas de gestes techniques de secours. Les scénarios sont fictifs ; leurs corrections ne constituent pas un protocole opérationnel.",
+    "extensionNote": "France / SST disponible en version pilote. Les déclinaisons FAW et OSHA sont à venir : chaque pays nécessitera des contenus, sources et validations propres, pas seulement une traduction.",
+    "back": "← Quitter l’exercice",
+    "quizMode": "QCM EXPRESS",
+    "scenarioMode": "MINI-SCÉNARIO",
+    "quizProgress": "Question {current} sur {total}",
+    "scenarioProgress": "{count} décision(s) prise(s)",
+    "correct": "Bon repère",
+    "incorrect": "Un repère à revoir",
+    "reflection": "Prenons un instant pour y réfléchir",
+    "next": "Continuer",
+    "finish": "Voir le bilan",
+    "source": "Consulter la référence",
+    "resultEyebrow": "EXERCICE TERMINÉ",
+    "resultTitle": "Chaque révision compte.",
+    "score": "{correct} / {total}",
+    "quizSummary": "{correct} bonne(s) réponse(s) sur {total}. Les explications vous aident à repérer les notions à retravailler.",
+    "scenarioSummary": "{correct} choix attendu(s) sur {total} décision(s). Ce score porte uniquement sur ce parcours fictif.",
+    "resultReminder": "Aucun score ne valide une compétence ou une certification SST. Reprenez ces points avec votre formateur et référez-vous aux consignes de votre entreprise.",
+    "replay": "Rejouer",
+    "home": "Choisir un autre mode",
+    "sourcesTitle": "Repères documentaires",
+    "privacy": "Sans compte, sans publicité, sans outil de suivi. Les réponses restent en mémoire dans cet onglet et sont perdues au rechargement. GitHub Pages assure l’hébergement.",
+    "sourceChecked": "Liens consultés le {date}. Contenus originaux à faire valider.",
+    "progressLabel": "Progression de l’exercice"
+  },
+  "sources": [
+    {
+      "id": "inrs",
+      "title": "INRS — Sauvetage secourisme du travail : pourquoi se former ?",
+      "url": "https://www.inrs.fr/formation/themes/sauvetage-secourisme/pourquoi-se-former.html"
+    },
+    {
+      "id": "emergency",
+      "title": "Service-Public — Quels numéros appeler en cas d’urgence ?",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33954"
+    }
+  ],
+  "questions": [
+    {
+      "id": "sst-role",
+      "category": "Prévention",
+      "prompt": "Le rôle du SST se limite-t-il à intervenir après un accident ?",
+      "answers": ["Oui, il n’a aucun rôle de prévention.", "Non, il contribue aussi à la prévention des risques professionnels.", "Oui, sauf s’il dirige l’entreprise."],
+      "correctIndex": 1,
+      "explanation": "Le SST a aussi un rôle de prévention des risques professionnels. La page INRS présente cette double mission : intervenir en cas de malaise ou d’accident et contribuer à la prévention.",
+      "sourceId": "inrs"
+    },
+    {
+      "id": "mac",
+      "category": "Formation",
+      "prompt": "Un QCM en ligne peut-il remplacer le maintien et l’actualisation des compétences (MAC) ?",
+      "answers": ["Oui, avec un score de 100 %.", "Oui, si on le fait tous les mois.", "Non, il ne remplace pas la formation MAC."],
+      "correctIndex": 2,
+      "explanation": "Ce jeu est un complément de révision. La prolongation du certificat SST est conditionnée au suivi d’une formation MAC avant la fin de sa validité.",
+      "sourceId": "inrs"
+    },
+    {
+      "id": "validity",
+      "category": "Formation",
+      "prompt": "Quelle est la durée de validité du certificat SST indiquée par l’INRS ?",
+      "answers": ["Deux ans.", "Cinq ans.", "Il est valable à vie."],
+      "correctIndex": 0,
+      "explanation": "L’INRS indique une validité de deux ans pour le certificat SST. Anticipez le MAC avec votre organisme de formation ; une révision sur ce site ne prolonge pas le certificat.",
+      "sourceId": "inrs"
+    },
+    {
+      "id": "medical-number",
+      "category": "Alerte",
+      "prompt": "En France, quel numéro permet de joindre le Samu en cas d’urgence médicale ?",
+      "answers": ["Le 17.", "Le 15.", "Le 0 800 112 112."],
+      "correctIndex": 1,
+      "explanation": "Le 15 permet d’appeler le Samu. Le 0 800 112 112 est un numéro de rappel des services d’urgence, pas un numéro à composer pour déclencher une alerte.",
+      "sourceId": "emergency"
+    },
+    {
+      "id": "europe-number",
+      "category": "Alerte",
+      "prompt": "Quel numéro d’urgence est utilisable dans tous les pays de l’Union européenne ?",
+      "answers": ["Le 112.", "Le 15.", "Le 911."],
+      "correctIndex": 0,
+      "explanation": "Le 112 est utilisable dans tous les pays de l’Union européenne et oriente vers le service adapté. Les numéros locaux et l’organisation des secours doivent être vérifiés pour chaque pays.",
+      "sourceId": "emergency"
+    },
+    {
+      "id": "fire-number",
+      "category": "Alerte",
+      "prompt": "En France, quel numéro permet de joindre les pompiers, notamment pour un incendie ?",
+      "answers": ["Le 18.", "Le 16.", "Le numéro de rappel 0 800 112 112."],
+      "correctIndex": 0,
+      "explanation": "Le 18 permet de joindre les pompiers. Le 112 peut aussi orienter vers les secours adaptés à la situation.",
+      "sourceId": "emergency"
+    },
+    {
+      "id": "emergency-cost",
+      "category": "Alerte",
+      "prompt": "Les appels aux numéros d’urgence 15, 18 et 112 sont-ils payants ?",
+      "answers": ["Oui, la nuit seulement.", "Oui, depuis un mobile.", "Non, ces appels sont gratuits."],
+      "correctIndex": 2,
+      "explanation": "Service-Public indique que ces appels sont gratuits, depuis un téléphone fixe ou portable, et que les services sont joignables 24 heures sur 24 et 7 jours sur 7.",
+      "sourceId": "emergency"
+    },
+    {
+      "id": "training-provider",
+      "category": "Formation",
+      "prompt": "Qui peut dispenser la formation SST conduisant au certificat ?",
+      "answers": ["N’importe quel site proposant un quiz.", "Les organismes de formation et entreprises habilités.", "Toute personne ayant déjà fait du secourisme."],
+      "correctIndex": 1,
+      "explanation": "L’INRS précise que seuls les organismes habilités peuvent dispenser les formations au sauvetage secourisme du travail. Ce site ne délivre aucun certificat.",
+      "sourceId": "inrs"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "warehouse",
+      "title": "Dans l’entrepôt : une zone à sécuriser",
+      "start": "observe",
+      "nodes": {
+        "observe": {
+          "type": "decision",
+          "title": "Observer avant d’approcher",
+          "context": "Exercice fictif : un collègue est au sol près d’une allée où circulent des engins. Vous êtes à l’extérieur de l’allée. Aucun geste technique n’est évalué dans ce cas.",
+          "sourceId": "inrs",
+          "choices": [
+            { "label": "Rester hors du danger et faire sécuriser la circulation selon les consignes du site.", "correct": true, "feedback": "Dans ce cas pédagogique, l’objectif est d’éviter une nouvelle exposition au danger. Les actions de sécurisation dépendent de l’organisation et des consignes de votre site.", "next": "alert" },
+            { "label": "Entrer immédiatement dans l’allée sans tenir compte des engins.", "correct": false, "feedback": "Ce choix vous expose au danger et peut créer une autre victime. Le scénario vous invite à réfléchir à la protection avant l’approche.", "next": "protection-review" }
+          ]
+        },
+        "protection-review": {
+          "type": "info",
+          "title": "La protection fait partie de la réflexion",
+          "context": "Dans cette fiction, la circulation est maintenant arrêtée par une personne habilitée. Retenez surtout que l’organisation du site et votre formation déterminent ce que vous pouvez faire sans vous exposer.",
+          "next": "alert"
+        },
+        "alert": {
+          "type": "decision",
+          "title": "Faire alerter les secours",
+          "context": "La zone est sécurisée. Une urgence médicale est suspectée et un témoin est disponible. Quel choix correspond à l’objectif d’alerte dans ce cas ?",
+          "sourceId": "emergency",
+          "choices": [
+            { "label": "Faire contacter le 15 ou le 112, en tenant compte de l’organisation des secours du site.", "correct": true, "feedback": "En France, le 15 joint le Samu ; le 112 oriente vers le service adapté. En situation réelle, suivez les consignes des secours et l’organisation de votre entreprise.", "next": "prevent" },
+            { "label": "Attendre la fin du poste pour en parler.", "correct": false, "feedback": "Les numéros d’urgence servent lorsqu’une intervention rapide est nécessaire. Attendre la fin du poste n’est pas le choix attendu dans cette situation fictive.", "next": "alert-review" }
+          ]
+        },
+        "alert-review": {
+          "type": "info",
+          "title": "Une alerte adaptée à l’urgence",
+          "context": "Le 15, le 18 et le 112 sont joignables à toute heure en France. Le choix du service dépend de la situation. Ce rappel n’évalue pas les gestes de secours.",
+          "next": "prevent"
+        },
+        "prevent": {
+          "type": "decision",
+          "title": "Après l’événement : prévenir une répétition",
+          "context": "L’intervention est terminée. Pour la suite, quelle contribution relève aussi du rôle du SST ?",
+          "sourceId": "inrs",
+          "choices": [
+            { "label": "Faire remonter la situation dangereuse par les canaux de prévention de l’entreprise.", "correct": true, "feedback": "Le SST contribue également à la prévention. Dans ce cas, faire remonter le risque permet à l’entreprise d’examiner son organisation et les mesures adaptées.", "next": "end" },
+            { "label": "Considérer que la prévention ne concerne jamais le SST.", "correct": false, "feedback": "La prévention fait partie du rôle du SST présenté par l’INRS ; elle ne se limite pas à la gestion de l’accident.", "next": "end" }
+          ]
+        },
+        "end": { "type": "end", "summary": "Vous avez travaillé trois repères : ne pas vous exposer, faire alerter et contribuer à la prévention. Les étapes ne décrivent pas une prise en charge complète d’une victime." }
+      }
+    },
+    {
+      "id": "office",
+      "title": "Au bureau : organiser une alerte",
+      "start": "call",
+      "nodes": {
+        "call": {
+          "type": "decision",
+          "title": "Identifier un numéro adapté",
+          "context": "Exercice fictif : un collègue présente un malaise qui nécessite une aide urgente. La zone ne présente pas de danger identifié. L’organisation interne prévoit qu’un témoin appelle les secours.",
+          "sourceId": "emergency",
+          "choices": [
+            { "label": "Faire appeler le 15 ou le 112.", "correct": true, "feedback": "Le 15 permet de joindre le Samu en France. Le 112 peut aussi orienter vers le service adapté.", "next": "callback" },
+            { "label": "Faire appeler le 0 800 112 112 pour demander une intervention.", "correct": false, "feedback": "Le 0 800 112 112 est le numéro utilisé par les services d’urgence pour rappeler. Ce n’est pas le numéro à composer pour lancer l’alerte.", "next": "number-review" }
+          ]
+        },
+        "number-review": {
+          "type": "info",
+          "title": "Appeler n’est pas rappeler",
+          "context": "Distinguez les numéros d’alerte (15, 18, 112 selon la situation) du numéro de rappel des secours (0 800 112 112). Dans la suite de ce cas fictif, l’alerte a été donnée.",
+          "next": "callback"
+        },
+        "callback": {
+          "type": "decision",
+          "title": "Reconnaître le rappel des secours",
+          "context": "Après l’alerte, le téléphone sonne. Le numéro affiché est le 0 800 112 112. Quel est le repère attendu ?",
+          "sourceId": "emergency",
+          "choices": [
+            { "label": "Reconnaître le numéro de rappel des services d’urgence et répondre.", "correct": true, "feedback": "Service-Public précise que les secours utilisent ce numéro pour rappeler les personnes les ayant contactés. Répondre à cet appel n’est ni facturé ni surtaxé.", "next": "training" },
+            { "label": "Ignorer systématiquement l’appel parce que ce numéro est inconnu.", "correct": false, "feedback": "Après votre alerte, ce numéro peut être le rappel des services d’urgence. Le connaître évite de le confondre avec un appel indésirable.", "next": "training" }
+          ]
+        },
+        "training": {
+          "type": "decision",
+          "title": "Entretenir les compétences",
+          "context": "Plus tard, l’équipe souhaite revoir ses repères. Comment utiliser ce site ?",
+          "sourceId": "inrs",
+          "choices": [
+            { "label": "Comme un complément, avec la formation, le MAC et les consignes de l’entreprise.", "correct": true, "feedback": "Un exercice en ligne peut alimenter une discussion avec un formateur. Il ne certifie pas les compétences et ne remplace pas le MAC.", "next": "end" },
+            { "label": "Comme une certification suffisante pour se passer de formation.", "correct": false, "feedback": "Seule une formation auprès d’un organisme habilité permet la certification SST. Aucun résultat de ce site n’a cette valeur.", "next": "end" }
+          ]
+        },
+        "end": { "type": "end", "summary": "Vous avez distingué numéro d’alerte, numéro de rappel et complément de révision. Ce cas ne couvre ni l’examen de la victime ni les gestes de secours." }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "defaultLocale": "fr-FR",
+  "locales": [
+    { "id": "fr-FR", "label": "France · SST", "available": true },
+    { "id": "en-GB", "label": "Royaume-Uni · FAW (à venir)", "available": false },
+    { "id": "en-US", "label": "États-Unis · OSHA (à venir)", "available": false }
+  ]
+}

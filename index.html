@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#123f39">
+    <meta name="description" content="Révisez la protection, l’alerte et la prévention avec des QCM et des mini-scénarios SST. Un complément pédagogique, pas une certification.">
+    <title>First Aid Trainer — Révision SST</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="First Aid Trainer, accueil">
+        <span class="brand-icon" aria-hidden="true">+</span>
+        <span>first aid <strong>trainer</strong><small>UN PEU DE PRATIQUE, PLUS DE REPÈRES</small></span>
+      </a>
+      <label class="locale-label" for="locale">Référentiel
+        <select id="locale" disabled><option>Chargement…</option></select>
+      </label>
+    </header>
+    <main id="main">
+      <div id="loading" role="status">Chargement des exercices…</div>
+      <section id="load-error" class="notice error" role="alert" hidden>
+        <h1>Impossible de charger les exercices</h1>
+        <p id="error-detail"></p>
+        <button id="retry" type="button">Réessayer</button>
+      </section>
+      <div id="content" hidden>
+        <section class="notice" aria-label="Limites de l’application">
+          <span class="notice-symbol" aria-hidden="true">i</span>
+          <p id="disclaimer"></p>
+        </section>
+        <section id="home">
+          <div class="hero">
+            <div>
+              <p class="eyebrow" id="hero-eyebrow"></p>
+              <h1 id="hero-title"></h1>
+              <p class="hero-description" id="hero-description"></p>
+              <div class="tags"><span id="country-tag"></span><span id="review-tag"></span></div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="art-ring"></div><div class="art-cross">+</div>
+              <span class="art-label">PROTÉGER · ALERTER · PRÉVENIR</span>
+            </div>
+          </div>
+          <div class="section-heading"><h2 id="mode-heading"></h2><span id="mode-subtitle"></span></div>
+          <div class="mode-grid">
+            <article class="mode-card">
+              <span class="mode-number" aria-hidden="true">01 / QCM</span>
+              <h3 id="quiz-title"></h3><p id="quiz-description"></p>
+              <div class="card-footer"><span id="quiz-meta"></span><button id="start-quiz" type="button"></button></div>
+            </article>
+            <article class="mode-card scenario-card">
+              <span class="mode-number" aria-hidden="true">02 / SCÉNARIO</span>
+              <h3 id="scenario-title"></h3><p id="scenario-description"></p>
+              <div class="scenario-select"><label id="scenario-label" for="scenario"></label><select id="scenario"></select></div>
+              <div class="card-footer"><span id="scenario-meta"></span><button id="start-scenario" type="button"></button></div>
+            </article>
+          </div>
+          <section class="context-card">
+            <h2 id="context-title"></h2><p id="context-description"></p><p id="extension-note"></p>
+          </section>
+        </section>
+        <section id="game" aria-labelledby="game-title" hidden>
+          <button id="back" class="text-button" type="button"></button>
+          <div class="game-heading"><p id="game-mode" class="eyebrow"></p><p id="progress-text"></p></div>
+          <progress id="progress" max="5" value="0" aria-label="Progression"></progress>
+          <article class="question-card">
+            <p id="question-category" class="eyebrow"></p>
+            <h1 id="game-title" tabindex="-1"></h1>
+            <p id="question-context"></p>
+            <div id="answers" class="answers"></div>
+            <section id="feedback" class="feedback" role="status" aria-live="polite" hidden></section>
+            <button id="next" class="next-button" type="button" hidden></button>
+          </article>
+        </section>
+        <section id="result" class="result-card" aria-labelledby="result-title" hidden>
+          <p id="result-eyebrow" class="eyebrow"></p>
+          <h1 id="result-title" tabindex="-1"></h1>
+          <p id="result-score" class="score"></p><p id="result-summary"></p>
+          <p id="result-reminder"></p>
+          <div class="result-actions"><button id="replay" type="button"></button><button id="home-button" class="secondary" type="button"></button></div>
+        </section>
+        <footer>
+          <div><strong id="sources-title"></strong><ul id="sources"></ul></div>
+          <p id="privacy-note"></p>
+          <a href="https://github.com/lapasque/first-aid-trainer">Code source sur GitHub</a>
+        </footer>
+      </div>
+    </main>
+    <noscript><p class="notice">JavaScript est nécessaire pour lancer les exercices. Activez-le puis rechargez la page.</p></noscript>
+  </body>
+</html>

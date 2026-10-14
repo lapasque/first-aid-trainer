@@ -1,0 +1,9 @@
+{
+  "name": "first-aid-trainer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Static SST revision quizzes and branching practice scenarios.",
+  "scripts": { "test": "node tests/node.js" },
+  "engines": { "node": ">=22" }
+}
