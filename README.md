@@ -11,6 +11,9 @@ d'exécution et sans compilation.
 - France / SST par défaut, catalogue pilote **non validé par un formateur SST**.
 - 8 questions ; chaque session tire 5 questions distinctes, sans chronomètre.
 - 2 scénarios fictifs à embranchements, avec des étapes de réflexion selon les choix.
+- Le cas « Au bureau » accepte l'alerte via le 15 / 112 ou via un numéro interne
+  d'urgence lorsque les consignes du site le prévoient pour déclencher les secours,
+  sans retarder l'alerte. Un standard quelconque n'est pas une procédure d'urgence.
 - Correction, explication et référence après chaque réponse.
 - Bilan de l'exercice, possibilité de rejouer ou de changer de mode.
 - Navigation au clavier, annonces des corrections et mise en page responsive.
@@ -105,7 +108,9 @@ Métadonnées : `locale`, `country`, `framework`, `version: 1`, `reviewStatus`,
 - Scénario : `id` unique, `title`, `start` (identifiant d'une décision de départ), `nodes`.
   - `decision` : `title`, `context`, `sourceId`, `choices`.
     Chaque choix a `label`, `correct`, `feedback`, `next`.
-    Une seule réponse attendue par décision.
+    Au moins une réponse valide par décision ; plusieurs alternatives peuvent
+    être valides selon le contexte. Le joueur choisit une seule réponse et
+    reçoit au maximum un point pour cette décision.
   - `info` : `title`, `context`, `next` ; aucune incidence sur le score.
   - `end` : `summary`.
 - Tous les nœuds doivent être accessibles depuis le départ ; les cycles,

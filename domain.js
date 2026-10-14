@@ -102,7 +102,7 @@ function validateScenario(scenario, sourceIds) {
       if (node.type === "decision") {
         requireValue(sourceIds.has(node.sourceId) && Array.isArray(node.choices) &&
           node.choices.length >= 2 && node.choices.every(record) &&
-          node.choices.filter(choice => choice.correct === true).length === 1,
+          node.choices.some(choice => choice.correct === true),
         `Décision ${id} invalide.`);
         for (const choice of node.choices) {
           requireValue(text(choice.label) && text(choice.feedback) && text(choice.next) &&

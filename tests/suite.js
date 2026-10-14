@@ -149,11 +149,26 @@ export function runTests(manifest, catalogs) {
       test(scenarioPrefix + "unreachable nodes are rejected", () => changed(copy => {
         copy.scenarios.find(item => item.id === scenario.id).nodes.unreachable = { type: "end", summary: "Unused" };
       }));
-      test(scenarioPrefix + "two correct choices are rejected", () => changed(copy => {
+      test(scenarioPrefix + "no correct choices are rejected", () => changed(copy => {
         copy.scenarios.find(item => item.id === scenario.id).nodes[scenario.start].choices.forEach(choice => {
-          choice.correct = true;
+          choice.correct = false;
         });
       }));
+      test(scenarioPrefix + "multiple correct alternatives are accepted and scored once", () => {
+        const copy = structuredClone(catalog);
+        const changedScenario = copy.scenarios.find(item => item.id === scenario.id);
+        const choices = changedScenario.nodes[scenario.start].choices;
+        choices[0].correct = true;
+        choices[1].correct = true;
+        validateCatalog(copy, catalog.locale);
+        for (const index of [0, 1]) {
+          const engine = createScenario(changedScenario);
+          assert(engine.answer(index).correct);
+          assert(engine.correct === 1 && engine.total === 1);
+          throws(() => engine.answer(index));
+          assert(engine.correct === 1 && engine.total === 1);
+        }
+      });
       test(scenarioPrefix + "skip, invalid and duplicate choices are rejected", () => {
         const engine = createScenario(scenario);
         throws(() => engine.advance());

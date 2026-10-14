@@ -195,23 +195,24 @@
         "call": {
           "type": "decision",
           "title": "Identifier un numéro adapté",
-          "context": "Exercice fictif : un collègue présente un malaise qui nécessite une aide urgente. La zone ne présente pas de danger identifié. L’organisation interne prévoit qu’un témoin appelle les secours.",
+          "context": "Exercice fictif : un collègue présente un malaise qui nécessite une aide urgente. La zone ne présente pas de danger identifié. Un témoin peut donner l’alerte. Selon le site, les consignes peuvent prévoir un numéro interne d’urgence pour déclencher les secours. Choisissez une possibilité adaptée aux consignes du site ; plusieurs réponses peuvent être valides.",
           "sourceId": "emergency",
           "choices": [
-            { "label": "Faire appeler le 15 ou le 112.", "correct": true, "feedback": "Le 15 permet de joindre le Samu en France. Le 112 peut aussi orienter vers le service adapté.", "next": "callback" },
+            { "label": "Faire appeler le 15 ou le 112, selon les consignes d’alerte du site.", "correct": true, "feedback": "Le 15 permet de joindre le Samu en France. Le 112 peut aussi orienter vers le service adapté. Certains sites prévoient un numéro interne d’urgence : tenez compte de leur organisation sans retarder l’alerte aux secours.", "next": "callback" },
+            { "label": "Faire appeler le numéro interne d’urgence, si les consignes du site le prévoient pour déclencher les secours.", "correct": true, "feedback": "Sur certains sites, un numéro interne d’urgence permet de déclencher les secours selon une procédure propre à l’établissement. Ce choix est valide lorsque les consignes du site le prévoient. Il ne s’agit pas de n’importe quel standard interne, ni d’un remplacement systématique du 15 ou du 112 : ne retardez pas l’alerte aux secours.", "next": "callback" },
             { "label": "Faire appeler le 0 800 112 112 pour demander une intervention.", "correct": false, "feedback": "Le 0 800 112 112 est le numéro utilisé par les services d’urgence pour rappeler. Ce n’est pas le numéro à composer pour lancer l’alerte.", "next": "number-review" }
           ]
         },
         "number-review": {
           "type": "info",
           "title": "Appeler n’est pas rappeler",
-          "context": "Distinguez les numéros d’alerte (15, 18, 112 selon la situation) du numéro de rappel des secours (0 800 112 112). Dans la suite de ce cas fictif, l’alerte a été donnée.",
+          "context": "Distinguez les numéros d’alerte (15, 18, 112 selon la situation, ou le numéro interne d’urgence prévu par les consignes du site) du numéro de rappel des secours (0 800 112 112). Dans la suite de ce cas fictif, les secours publics ont été alertés, directement ou via la procédure interne.",
           "next": "callback"
         },
         "callback": {
           "type": "decision",
           "title": "Reconnaître le rappel des secours",
-          "context": "Après l’alerte, le téléphone sonne. Le numéro affiché est le 0 800 112 112. Quel est le repère attendu ?",
+          "context": "Dans la suite de ce cas fictif, les secours publics ont été alertés, directement ou via la procédure interne. Ils rappellent la personne qui les a contactés : le numéro affiché est le 0 800 112 112. Quel est le repère attendu ?",
           "sourceId": "emergency",
           "choices": [
             { "label": "Reconnaître le numéro de rappel des services d’urgence et répondre.", "correct": true, "feedback": "Service-Public précise que les secours utilisent ce numéro pour rappeler les personnes les ayant contactés. Répondre à cet appel n’est ni facturé ni surtaxé.", "next": "training" },
@@ -228,7 +229,7 @@
             { "label": "Comme une certification suffisante pour se passer de formation.", "correct": false, "feedback": "Seule une formation auprès d’un organisme habilité permet la certification SST. Aucun résultat de ce site n’a cette valeur.", "next": "end" }
           ]
         },
-        "end": { "type": "end", "summary": "Vous avez distingué numéro d’alerte, numéro de rappel et complément de révision. Ce cas ne couvre ni l’examen de la victime ni les gestes de secours." }
+        "end": { "type": "end", "summary": "Vous avez distingué numéros d’alerte publics, numéro interne d’urgence prévu par les consignes du site, numéro de rappel et complément de révision. Ce cas ne couvre ni l’examen de la victime ni les gestes de secours." }
       }
     }
   ]

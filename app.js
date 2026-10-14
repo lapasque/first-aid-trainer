@@ -159,17 +159,17 @@ function showFeedback(correct, explanation, sourceId) {
   $("feedback").hidden = false;
 }
 
-function markAnswers(index, correctIndex) {
+function markAnswers(index, isCorrect) {
   [...$("answers").children].forEach((button, position) => {
     button.disabled = true;
-    if (position === correctIndex) button.classList.add("correct");
+    if (isCorrect(position)) button.classList.add("correct");
     else if (position === index) button.classList.add("incorrect");
   });
 }
 
 function answerQuiz(index) {
   const correct = session.answer(index);
-  markAnswers(index, session.question.correctIndex);
+  markAnswers(index, position => position === session.question.correctIndex);
   showFeedback(correct, session.question.explanation, session.question.sourceId);
   $("progress").value = session.current;
   setText("next", session.last ? catalog.ui.finish : catalog.ui.next);
@@ -180,7 +180,7 @@ function answerQuiz(index) {
 function answerScenario(index) {
   const node = session.node;
   const choice = session.answer(index);
-  markAnswers(index, node.choices.findIndex(item => item.correct));
+  markAnswers(index, position => node.choices[position].correct);
   showFeedback(choice.correct, choice.feedback, node.sourceId);
   setText("progress-text", format(catalog.ui.scenarioProgress, { count: session.total }));
   setText("next", selectedScenario.nodes[choice.next].type === "end" ? catalog.ui.finish : catalog.ui.next);
